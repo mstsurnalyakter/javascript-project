@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Email Field (101)</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+
+    <section class="button">
+        <button>Sign Up for my Newsletter</button>
+        <form class="hide">
+            <input type="email" placeholder="ab@gamil.com" id="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('form').slideDown(200);
+                $('button').css({
+                    "border":"none",
+                    "cursor":"default",
+                    "borderBottomLeftRadius":"0px",
+                    "borderBottomRightRadius":"0px"
+
+                });
+                $('button').css({
+                    "borderTopLeftRadius":"0px",
+                    "borderTopRightRadius":"0px"
+                });
+                $("#email").focus();
+            });
+        });
+    </script>
+
+</body>
+</html>

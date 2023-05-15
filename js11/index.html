@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+</head>
+<body>
+
+    <section class="start_btn">
+        <a href="#">View Modal</a>
+    </section>
+
+    <section class="center modal_box">
+      
+        <section class="fas fa-times"></section>
+
+        <section class="fa-solid fa-envelope icon1"></section>
+
+        <header>Don't miss updates from us !</header>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, voluptatibus velit.</p>
+
+        <form action="">
+            <section class="fa-solid fa-envelope icon2"></section>
+            <input type="email" name="" id="email" placeholder="abcd@gmail.com">
+            <button type="submit">Subscribe</button>
+        </form>
+
+        <section class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </section>
+
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $('.start_btn').click(function(){
+                $('.modal_box').toggleClass("show-modal");
+                $('.start_btn').toggleClass("show-modal");
+            });
+
+            $('.fa-times').click(function(){
+                $('.modal_box').toggleClass("show-modal");
+                $('.start_btn').toggleClass("show-modal");
+            });
+
+        });
+    </script>
+    
+</body>
+</html>

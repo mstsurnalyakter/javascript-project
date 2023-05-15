@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Ring or Loader (98)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="outer"></section>
+
+    <section class="inner">
+        <span>0%</span>
+    </section>
+
+    <script>
+        let outer = document.querySelector(".outer");
+        let inner = document.querySelector(".inner");
+        let percent = document.querySelector("span");
+
+        let count = 0;
+
+        inner.addEventListener('click', function(){
+            let loading = setInterval(animate,200);
+            function animate(){
+                if(count == 100){
+                    outer.classList.remove("active-loader");
+                    outer.classList.add("active-loader-2");
+                    clearInterval();
+                }else{
+                    count = count + 1;
+                    percent.textContent = count + '%';
+                    outer.classList.add("active-loader");
+                }
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

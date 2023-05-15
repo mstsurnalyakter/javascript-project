@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Text Mask Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+
+    <section class="text">Salma Begum</section>
+
+    <script>
+        $(document).ready(function(){
+            $(document).mousemove(function(p){
+                let cursorX = p.pageX;
+                let cursorY = p.pageY;
+                let tranX = ((7 * cursorX)/ 570) + 40;
+                let tranxY = ((7 * cursorY)/ 570) + 50;
+                $(".text").css({
+                    "background-position": tranX + "%" + tranY + "%"
+                });
+            });
+        });
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+
+body{
+    user-select: none;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    text-align: center;background: #060a1f;
+    justify-content: center;
+}
+
+nav{
+    position: relative;
+    width: 170px;
+    height: 80px;
+    background: #080e2b;
+    border-radius: 5px;
+    border: 1px solid #060a1f;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+
+nav::before{
+    content: 'MENU';
+    position: absolute;
+    color: #a9b5ef;
+    font-size: 30px;
+    font-weight: 800;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 80px;
+    background: #080e2b;
+    z-index: 10;
+    transition: all 0.4s;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 80px;
+}
+
+
+nav ul a{
+    color: #a9b5ef;
+    font-size: 24px;
+    margin: 0px -50px;
+    border-radius: 5px;
+    transition: all 0.4s;
+    opacity: 0;
+     pointer-events: none;
+}
+
+
+ul a:hover, ul a.active{
+    background: #0c1540;
+
+}
+
+nav._expand{
+    width: 730px;
+}
+
+nav._expand ul a{
+     margin: 0px 10px;
+     padding: 10px 15px;
+     opacity: 1;
+     pointer-events: auto;
+}
+nav._expand::before{
+    opacity: 0;
+    pointer-events: none;
+
+}
+

@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main{
+    position: relative;
+}
+
+main .notify::before {
+    position: absolute;
+    content: attr(data-count);
+    /* content: '1'; */
+
+    top: 0;
+    right: -3px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 12px;
+    background: linear-gradient(#ff1a1a,#ff0000,#e60000);
+    border-radius: 50px;
+    line-height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    animation: animate 0.9s linear infinite alternate;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.09);
+    }
+    
+}
+
+main i{
+    color: blue;
+    font-size: 80px;
+}
+.notify.add-numb::before{
+    opacity: 1;
+
+}
+
+main .btn{
+    position: absolute;
+    left: -25px;
+    top: 100px;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    font-size: 15px;
+    font-weight:bold;
+    border: 1px solid #111755;
+    background: #1A237E;
+    border-radius: 3px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+
+main .btn:hover{
+    background: #161d6a;
+}
+
